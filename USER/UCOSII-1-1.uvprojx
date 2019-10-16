@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>UCOSII-1-1</TargetName>
+      <TargetName>UCOSII-1-2</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
@@ -49,12 +49,12 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>..\OBJ\</OutputDirectory>
-          <OutputName>UCOSII-1-1</OutputName>
+          <OutputName>UCOSII-1-2</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
+          <BrowseInformation>0</BrowseInformation>
           <ListingPath>..\OBJ\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F767xx,USE_HAL_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\STM32F7xx_HAL_Driver\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\UCOSII\uC-LIB;..\UCOSII\uC-CPU;..\UCOSII\UCOS_BSP;..\UCOSII\uCOS-CONFIG;..\UCOSII\uCOS-II\Source;..\UCOSII\uC-CPU\ARM-Cortex-M4\RealView;..\UCOSII\uC-LIB\Ports\ARM-Cortex-M4\RealView;..\UCOSII\uCOS-II\Ports\ARM-Cortex-M4\Generic\RealView</IncludePath>
+              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\STM32F7xx_HAL_Driver\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\LCD;..\HARDWARE\PCF8574;..\HARDWARE\SDRAM;..\UCOSII\uC-LIB;..\UCOSII\uC-CPU;..\UCOSII\UCOS_BSP;..\UCOSII\uCOS-CONFIG;..\UCOSII\uCOS-II\Source;..\UCOSII\uC-CPU\ARM-Cortex-M4\RealView;..\UCOSII\uC-LIB\Ports\ARM-Cortex-M4\RealView;..\UCOSII\uCOS-II\Ports\ARM-Cortex-M4\Generic\RealView</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -486,6 +486,16 @@
               <FileType>1</FileType>
               <FilePath>..\HALLIB\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_usart.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f7xx_ll_fmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32F7xx_HAL_Driver\Src\stm32f7xx_ll_fmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f7xx_hal_sdram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HALLIB\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_sdram.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -515,6 +525,26 @@
               <FileName>led.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\LED\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>myiic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\IIC\myiic.c</FilePath>
+            </File>
+            <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\KEY\key.c</FilePath>
+            </File>
+            <File>
+              <FileName>pcf8574.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\PCF8574\pcf8574.c</FilePath>
+            </File>
+            <File>
+              <FileName>sdram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\SDRAM\sdram.c</FilePath>
             </File>
           </Files>
         </Group>
