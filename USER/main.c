@@ -57,9 +57,7 @@ OS_STK KEY_TASK_STK[KEY_STK_SIZE];
 //任务函数接口
 void key_task(void *pdata);
 
-int testCnt = 1;
 int main(void) {
-    testCnt = 2;
     Cache_Enable();                 //打开L1-Cache
     HAL_Init();                        //初始化HAL库
     Stm32_Clock_Init(432, 25, 2, 9);   //设置时钟,216Mhz
